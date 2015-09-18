@@ -34,16 +34,19 @@ Information about development is also available:
     running
     migrating
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Configuration
+
+   config
 
 .. _jupyter-subprojects:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Jupyter Subprojects
 
    subprojects
-   config
-
 
 .. _dev-docs:
 
