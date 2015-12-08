@@ -2,7 +2,14 @@ language: python
 sudo: false
 python:
     - 3.4
+    - 3.5
 install:
+    - pip install --upgrade pip
     - pip install --upgrade sphinx
 script:
-    - cd docs && make html && make linkcheck
+    - cd docs && make html
+    # Starting with Python 3.5 html.parser.HTMLParseError has been removed.
+    # Sphinx's make linkcheck will fail until PR #1946 makes it into a Sphinx
+    # release (likely 1.4)
+    # Reference: https://github.com/sphinx-doc/sphinx/pull/1946
+    - if [[ $TRAVIS_PYTHON_VERSION != '3.5' ]]; then make linkcheck; fi
