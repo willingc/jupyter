@@ -2,7 +2,9 @@ language: python
 sudo: false
 python:
     - 3.4
+    - 3.5
 install:
+    - pip install --upgrade pip 
     - pip install --upgrade sphinx
 script:
     - cd docs && make html && make linkcheck
