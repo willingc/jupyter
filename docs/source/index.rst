@@ -1,6 +1,5 @@
 .. _landing:
 
-
 =====================
 Jupyter Documentation
 =====================
@@ -46,7 +45,7 @@ development of Jupyter as well as technical details helpful for development.
     install
     running
     migrating
-
+    install_osx
 
 .. _jupyter-subprojects:
 
