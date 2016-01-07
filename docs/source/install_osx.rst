@@ -42,8 +42,6 @@ Install Jupyter Notebook
 
      All commands shown below must be run in the Terminal.
 
-.. _new-to-python-and-jupyter:
-
 Install Jupyter using Anaconda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
