@@ -1,0 +1,12 @@
+name: notebook_docs
+dependencies:
+- python=3.5
+- jinja2
+- tornado
+- nbformat
+- jupyter_client
+- ipykernel
+- pip:
+  - sphinx>=1.3.6
+  - nbsphinx
+  - jupyter-sphinx-theme
