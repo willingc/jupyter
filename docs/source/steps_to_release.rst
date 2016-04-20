@@ -23,7 +23,7 @@ Pre-release actions
 Version
 -------
 
-Update version in `<package>/_version.py`.
+Update version in ``<package>/_version.py``.
 
 For example, the following prepares ``_version.py`` for release of
 oauthenticator's version 0.3.0:
@@ -78,7 +78,7 @@ Setting up the next release milestone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *After the Upload step is done:* Update ``_version.py`` to the next version
-(x, y+1) ``x.y.z-dev``if it doesn't exist already, and push:
+(x, y+1) ``x.y.z-dev`` if it doesn't exist already, and push:
 
 ::
 
