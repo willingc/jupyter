@@ -16,7 +16,7 @@ Pre-release actions
 - Verify tests pass and documentation builds.
 - Clean out any untracked files from repo:
 
-.. highlight:: bash
+::
 
     git clean -xfdi
 
@@ -28,7 +28,7 @@ Update version in `<package>/_version.py`.
 For example, the following prepares ``_version.py`` for release of
 oauthenticator's version 0.3.0:
 
-.. highlight:: python
+::
 
     """oauthenticator version info"""
 
@@ -47,7 +47,7 @@ Tag
 
 Commit and tag:
 
-.. highlight:: bash
+::
 
     V=0.3.0
     git commit -am "release $V"
@@ -64,7 +64,7 @@ Upload
 
 Build and upload release:
 
-.. highlight:: bash
+::
 
     python setup.py sdist --formats=gztar,zip
     python setup.py bdist_wheel
@@ -87,7 +87,7 @@ Setting up the next release milestone
 
 For example, update ``_version.py`` to the following for 0.4.0dev:
 
-.. highlight:: python
+::
 
     """oauthenticator version info"""
 
@@ -101,7 +101,7 @@ For example, update ``_version.py`` to the following for 0.4.0dev:
         'dev', # comment-out this line for a release
     )
 
-.. highlight:: bash
+::
 
     git commit -am "Bump to next development version"
     git push origin master
