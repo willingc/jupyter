@@ -12,8 +12,8 @@ to run the notebook server. You can start the notebook server from the
     jupyter notebook
 
 This will print some information about the notebook server in your terminal,
-including the URL of the web application
-(by default, ``http://localhost:8888``):
+including the URL of the web application (by default,
+ ``http://localhost:8888``):
 
 .. code:: bash
 

@@ -54,7 +54,7 @@ source_suffix = ['.rst', '.md']
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'contents'
+master_doc = 'index'
 
 # General information about the project.
 project = 'Jupyter Documentation'
@@ -104,7 +104,7 @@ html_static_path = ['_static']
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-html_additional_pages = {'index': 'index.html'}
+html_additional_pages = {'contents': 'contents.html'}
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Jupyter'
