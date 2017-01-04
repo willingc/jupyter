@@ -11,10 +11,11 @@ import os
 import shlex
 import recommonmark.parser
 
+import sphinx_bootstrap_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-# sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('_themes'))
 
 # -- General configuration ------------------------------------------------
 
@@ -81,12 +82,39 @@ todo_include_todos = False
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'jupytertheme'
+# The theme to use for HTML and HTML Help pages.  Major themes that come with
+# Sphinx are currently 'default' and 'sphinxdoc'.
+html_theme = 'bootstrap'
+
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
 
 html_theme_options = {
+	'navbar_sidebarrel': False,
+	'navbar_pagenav': False,
+	'navbar_fixed_top': False,
+	'source_link_position': False,
 }
 
-html_theme_path = ["."]
+# Add any paths that contain custom themes here, relative to this directory.
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+html_title = "Jupyter %s Docs" % (release, )
+
+# A shorter title for the navigation bar.  Default is the same as html_title.
+#html_short_title = None
+
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+html_logo = '_static/_images/jupyter.svg'
+
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+#html_favicon = None
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -97,15 +125,39 @@ html_static_path = ['_static']
 # using the given strftime format.
 html_last_updated_fmt = '%Y-%m-%d'
 
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+#html_use_smartypants = True
+
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {'**': ['toctree.html']}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-html_additional_pages = {'index': 'index.html'}
+#html_additional_pages = {}
+
+# If false, no module index is generated.
+#html_use_modindex = True
+
+# If false, no index is generated.
+#html_use_index = True
+
+# If true, the index is split into individual pages for each letter.
+#html_split_index = False
+
+# If true, links to the reST sources are added to the pages.
+#html_show_sourcelink = True
+
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+#html_use_opensearch = ''
+
+# If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Jupyter'
+htmlhelp_basename = 'Jupyterdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
