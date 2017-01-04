@@ -11,9 +11,6 @@ import os
 import shlex
 import recommonmark.parser
 
-from jupyter_sphinx_theme import *
-init_theme()
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -83,6 +80,13 @@ pygments_style = 'sphinx'
 todo_include_todos = False
 
 # -- Options for HTML output ----------------------------------------------
+
+html_theme = 'jupytertheme'
+
+html_theme_options = {
+}
+
+html_theme_path = ["."]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -167,6 +171,6 @@ graphviz_output_format = 'svg'
 # if calling sphinx-build directly - if using the make.bat file first do:
 # set SPHINXOPTS=-D graphviz_dot="C:\Program Files (x86)\Graphviz2.38\bin\dot.exe"
 # or similar, if all else fails, something like:
-# graphviz_dot=r'c:\Program Files (x86)\Graphviz2.38\bin\dot.exe' 
+# graphviz_dot=r'c:\Program Files (x86)\Graphviz2.38\bin\dot.exe'
 # with your path to graphviz in should work if added to this file.
 # BUT Please do not commit with the path on your computer in place.
